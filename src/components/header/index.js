@@ -43,11 +43,6 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link smooth-scroll" href="#portfolio">
-                    Portfolio
-                  </a>
-                </li>
-                <li className="nav-item">
                   <a className="nav-link smooth-scroll" href="#experience">
                     Experience
                   </a>
