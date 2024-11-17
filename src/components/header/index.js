@@ -44,7 +44,7 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link smooth-scroll" href="#experience">
-                    Experience
+                    Education
                   </a>
                 </li>
                 <li className="nav-item">

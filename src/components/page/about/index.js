@@ -9,21 +9,13 @@ const About = () => {
             <div className="col-lg-6 col-md-12">
               <div className="card-body">
                 <div className="h4 mt-0 title">About</div>
+                <p>Hello! I am Gabriela Senduk</p>
                 <p>
-                  Hello! I am Anthony Barnett. Web Developer, Graphic Designer
-                  and Photographer.
-                </p>
-                <p>
-                  Creative CV is a HTML resume template for professionals. Built
-                  with Bootstrap 4, Now UI Kit and FontAwesome, this modern and
-                  responsive design template is perfect to showcase your
-                  portfolio, skills and experience.{" "}
-                  <a
-                    href="https://templateflip.com/templates/creative-cv/"
-                    target="_blank"
-                  >
-                    Learn More
-                  </a>
+                  Saat ini saya sedang menempuh pendidikan di jurusan Sistem
+                  Informasi. Sebagai mahasiswa yang memiliki minat besar pada
+                  teknologi dan inovasi, saya senang mengeksplorasi bagaimana
+                  sistem informasi dapat dirancang dan digunakan untuk
+                  menyelesaikan berbagai masalah nyata secara efektif.
                 </p>
               </div>
             </div>
@@ -34,33 +26,33 @@ const About = () => {
                   <div className="col-sm-4">
                     <strong className="text-uppercase">Age:</strong>
                   </div>
-                  <div className="col-sm-8">24</div>
+                  <div className="col-sm-8">21</div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-sm-4">
                     <strong className="text-uppercase">Email:</strong>
                   </div>
-                  <div className="col-sm-8">anthony@company.com</div>
+                  <div className="col-sm-8">gabrielaSenduk1@gmail.com</div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-sm-4">
                     <strong className="text-uppercase">Phone:</strong>
                   </div>
-                  <div className="col-sm-8">+1718-111-0011</div>
+                  <div className="col-sm-8">+62 8969 5633 483</div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-sm-4">
                     <strong className="text-uppercase">Address:</strong>
                   </div>
                   <div className="col-sm-8">
-                    140, City Center, New York, U.S.A
+                    Bitung, Sulawesi Utara, Indonesia
                   </div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-sm-4">
                     <strong className="text-uppercase">Language:</strong>
                   </div>
-                  <div className="col-sm-8">English, German, French</div>
+                  <div className="col-sm-8">English and Indonesia</div>
                 </div>
               </div>
             </div>

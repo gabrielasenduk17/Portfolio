@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "../../../assets/images/anthony.jpg"
 const Profile = () => {
   return (
     <div className="profile-page">
@@ -14,29 +14,12 @@ const Profile = () => {
             <div className="content-center">
               <div className="cc-profile-image">
                 <a href="#">
-                  <img src="images/anthony.jpg" alt="Image" />
+                  <img src={Image} alt="Image" />
                 </a>
               </div>
               <div className="h2 title">Anthony Barnett</div>
-              <p className="category text-white">
-                Web Developer, Graphic Designer, Photographer
-              </p>
-              <a
-                className="btn btn-primary smooth-scroll mr-2"
-                href="#contact"
-                data-aos="zoom-in"
-                data-aos-anchor="data-aos-anchor"
-              >
-                Hire Me
-              </a>
-              <a
-                className="btn btn-primary"
-                href="#"
-                data-aos="zoom-in"
-                data-aos-anchor="data-aos-anchor"
-              >
-                Download CV
-              </a>
+              
+              
             </div>
           </div>
           <div className="section">
@@ -50,22 +33,8 @@ const Profile = () => {
                 >
                   <i className="fa fa-facebook" />
                 </a>
-                <a
-                  className="btn btn-default btn-round btn-lg btn-icon"
-                  href="#"
-                  rel="tooltip"
-                  title="Follow me on Twitter"
-                >
-                  <i className="fa fa-twitter" />
-                </a>
-                <a
-                  className="btn btn-default btn-round btn-lg btn-icon"
-                  href="#"
-                  rel="tooltip"
-                  title="Follow me on Google+"
-                >
-                  <i className="fa fa-google-plus" />
-                </a>
+                
+                
                 <a
                   className="btn btn-default btn-round btn-lg btn-icon"
                   href="#"
