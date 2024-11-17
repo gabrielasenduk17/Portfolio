@@ -17,7 +17,7 @@ const Footer = () => {
           <i className="fa fa-instagram fa-2x " aria-hidden="true" />
         </a>
       </div>
-      <div className="h4 title text-center">Anthony Barnett</div>
+      <div className="h4 title text-center">Gabriela Senduk</div>
       <div className="text-center text-muted">
         <p>
           © Creative CV. All rights reserved.

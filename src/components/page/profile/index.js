@@ -1,5 +1,7 @@
 import React from "react";
-import Image from "../../../assets/images/anthony.jpg"
+import Image from "../../../assets/images/img (2).jpg";
+import NewBackgroundImage from "../../../assets/images/Bgg.jpeg"; // Import your new background image
+
 const Profile = () => {
   return (
     <div className="profile-page">
@@ -8,7 +10,7 @@ const Profile = () => {
           <div
             className="page-header-image"
             data-parallax="true"
-            style={{ backgroundImage: 'url("images/cc-bg-1.jpg")' }}
+            style={{ backgroundImage: `url(${NewBackgroundImage})` }} // Use imported image as background
           />
           <div className="container">
             <div className="content-center">
@@ -17,9 +19,7 @@ const Profile = () => {
                   <img src={Image} alt="Image" />
                 </a>
               </div>
-              <div className="h2 title">Anthony Barnett</div>
-              
-              
+              <div className="h2 title">Gabriela Senduk</div>
             </div>
           </div>
           <div className="section">
@@ -27,17 +27,16 @@ const Profile = () => {
               <div className="button-container">
                 <a
                   className="btn btn-default btn-round btn-lg btn-icon"
-                  href="#"
+                  href="https://www.facebook.com/gabriela.s.senduk?mibextid=LQQJ4d"
                   rel="tooltip"
                   title="Follow me on Facebook"
                 >
                   <i className="fa fa-facebook" />
                 </a>
                 
-                
                 <a
                   className="btn btn-default btn-round btn-lg btn-icon"
-                  href="#"
+                  href="https://www.instagram.com/gabrielasenduk_?igsh=MTNoeTBoNjNyOThibA%3D%3D&utm_source=qr"
                   rel="tooltip"
                   title="Follow me on Instagram"
                 >

@@ -32,7 +32,7 @@ const About = () => {
                   <div className="col-sm-4">
                     <strong className="text-uppercase">Email:</strong>
                   </div>
-                  <div className="col-sm-8">gabrielaSenduk1@gmail.com</div>
+                  <div className="col-sm-8">gabrielasenduk1@gmail.com</div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-sm-4">

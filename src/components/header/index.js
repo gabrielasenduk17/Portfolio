@@ -11,7 +11,7 @@ const Header = () => {
           <div className="container">
             <div className="navbar-translate">
               <a className="navbar-brand" href="#" rel="tooltip">
-                Creative CV
+                My Portofolio
               </a>
               <button
                 className="navbar-toggler navbar-toggler"

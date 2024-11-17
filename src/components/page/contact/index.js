@@ -100,16 +100,16 @@ const Contact = () => {
                           <strong>Address </strong>
                         </p>
                         <p className="pb-2">
-                          140, City Center, New York, U.S.A
+                        Bitung, Sulawesi Utara, Indonesia
                         </p>
                         <p className="mb-0">
                           <strong>Phone</strong>
                         </p>
-                        <p className="pb-2">+1718-111-0011</p>
+                        <p className="pb-2">+628 969 5633 483</p>
                         <p className="mb-0">
                           <strong>Email</strong>
                         </p>
-                        <p>anthony@company.com</p>
+                        <p>gabrielasenduk1@gmail.com</p>
                       </div>
                     </div>
                   </div>
