@@ -18,16 +18,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="h4 title text-center">Gabriela Senduk</div>
-      <div className="text-center text-muted">
-        <p>
-          © Creative CV. All rights reserved.
-          <br />
-          Design -{" "}
-          <a className="credit" href="https://templateflip.com" target="_blank">
-            TemplateFlip
-          </a>
-        </p>
-      </div>
+      <div className="text-center text-muted"></div>
     </footer>
   );
 };

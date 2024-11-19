@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
+
 
 const About = () => {
-  
+  const [about, setAbout] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const aboutRef = ref(db, "about");
+    onValue(aboutRef, (snapshot) => {
+      const data = snapshot.val();
+      setAbout(data);
+    });
+  }, []);
   return (
     <div className="section" id="about">
       <div className="container">
@@ -9,51 +19,47 @@ const About = () => {
           <div className="row">
             <div className="col-lg-6 col-md-12">
               <div className="card-body">
-                <div className="h4 mt-0 title">About</div>
-                <p>Hello! I am Gabriela Senduk</p>
+                <div className="h4 mt-0 title">{about.about1}</div>
+                <p>{about.name}</p>
                 <p>
-                  Saat ini saya sedang menempuh pendidikan di jurusan Sistem
-                  Informasi. Sebagai mahasiswa yang memiliki minat besar pada
-                  teknologi dan inovasi, saya senang mengeksplorasi bagaimana
-                  sistem informasi dapat dirancang dan digunakan untuk
-                  menyelesaikan berbagai masalah nyata secara efektif.
+                  {about.desc}
                 </p>
               </div>
             </div>
             <div className="col-lg-6 col-md-12">
               <div className="card-body">
-                <div className="h4 mt-0 title">Basic Information</div>
+                <div className="h4 mt-0 title">{about.about2}</div>
                 <div className="row">
                   <div className="col-sm-4">
-                    <strong className="text-uppercase">Age:</strong>
+                    <strong className="text-uppercase">{about.age}</strong>
                   </div>
-                  <div className="col-sm-8">21</div>
+                  <div className="col-sm-8">{about.age1}</div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-sm-4">
-                    <strong className="text-uppercase">Email:</strong>
+                    <strong className="text-uppercase">{about.email}</strong>
                   </div>
-                  <div className="col-sm-8">gabrielasenduk1@gmail.com</div>
+                  <div className="col-sm-8">{about.email1}</div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-sm-4">
-                    <strong className="text-uppercase">Phone:</strong>
+                    <strong className="text-uppercase">{about.phone}</strong>
                   </div>
-                  <div className="col-sm-8">+62 8969 5633 483</div>
+                  <div className="col-sm-8">{about.phone1}</div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-sm-4">
-                    <strong className="text-uppercase">Address:</strong>
+                    <strong className="text-uppercase">{about.address}</strong>
                   </div>
                   <div className="col-sm-8">
-                    Bitung, Sulawesi Utara, Indonesia
+                  {about.address1}
                   </div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-sm-4">
-                    <strong className="text-uppercase">Language:</strong>
+                    <strong className="text-uppercase">{about.language}</strong>
                   </div>
-                  <div className="col-sm-8">English and Indonesia</div>
+                  <div className="col-sm-8">{about.language1}</div>
                 </div>
               </div>
             </div>

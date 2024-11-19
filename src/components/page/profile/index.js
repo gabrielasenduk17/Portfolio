@@ -1,8 +1,17 @@
-import React from "react";
-import Image from "../../../assets/images/img (2).jpg";
-import NewBackgroundImage from "../../../assets/images/Bgg.jpeg"; // Import your new background image
+import NewBackgroundImage from "../../../assets/images/Bgg.jpeg";
+import React, { useEffect, useState } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const Profile = () => {
+  const [profile, setProfile] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const profileRef = ref(db, "profile");
+    onValue(profileRef, (snapshot) => {
+      const data = snapshot.val();
+      setProfile(data);
+    });
+  }, []);
   return (
     <div className="profile-page">
       <div className="wrapper">
@@ -16,10 +25,10 @@ const Profile = () => {
             <div className="content-center">
               <div className="cc-profile-image">
                 <a href="#">
-                  <img src={Image} alt="Image" />
+                  <img src={profile.image || ""} alt="Image" />
                 </a>
               </div>
-              <div className="h2 title">Gabriela Senduk</div>
+              <div className="h2 title">{profile.name}</div>
             </div>
           </div>
           <div className="section">
@@ -33,7 +42,7 @@ const Profile = () => {
                 >
                   <i className="fa fa-facebook" />
                 </a>
-                
+
                 <a
                   className="btn btn-default btn-round btn-lg btn-icon"
                   href="https://www.instagram.com/gabrielasenduk_?igsh=MTNoeTBoNjNyOThibA%3D%3D&utm_source=qr"

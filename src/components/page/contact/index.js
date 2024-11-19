@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const Contact = () => {
+  const [contact, setContact] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const aboutRef = ref(db, "contact");
+    onValue(aboutRef, (snapshot) => {
+      const data = snapshot.val();
+      setContact(data);
+    });
+  }, []);
   return (
     <div className="section" id="contact">
       <div
@@ -12,7 +22,7 @@ const Contact = () => {
             <div className="row">
               <div className="col-md-9">
                 <div className="card mb-0" data-aos="zoom-in">
-                  <div className="h4 text-center title">Contact Me</div>
+                  <div className="h4 text-center title">{contact.contact1}</div>
                   <div className="row">
                     <div className="col-md-6">
                       <div className="card-body">
@@ -21,7 +31,7 @@ const Contact = () => {
                           method="POST"
                         >
                           <div className="p pb-3">
-                            <strong>Feel free to contact me </strong>
+                            <strong>{contact.contact2} </strong>
                           </div>
                           <div className="row mb-3">
                             <div className="col">
@@ -87,7 +97,7 @@ const Contact = () => {
                           <div className="row">
                             <div className="col">
                               <button className="btn btn-primary" type="submit">
-                                Send
+                                {contact.contact3}
                               </button>
                             </div>
                           </div>
@@ -97,19 +107,19 @@ const Contact = () => {
                     <div className="col-md-6">
                       <div className="card-body">
                         <p className="mb-0">
-                          <strong>Address </strong>
+                          <strong>{contact.address} </strong>
                         </p>
                         <p className="pb-2">
-                        Bitung, Sulawesi Utara, Indonesia
+                        {contact.address1}
                         </p>
                         <p className="mb-0">
-                          <strong>Phone</strong>
+                          <strong>{contact.phone}</strong>
                         </p>
-                        <p className="pb-2">+628 969 5633 483</p>
+                        <p className="pb-2">{contact.phone1}</p>
                         <p className="mb-0">
-                          <strong>Email</strong>
+                          <strong>{contact.email}</strong>
                         </p>
-                        <p>gabrielasenduk1@gmail.com</p>
+                        <p>{contact.email1}</p>
                       </div>
                     </div>
                   </div>
