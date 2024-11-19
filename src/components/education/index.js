@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const Experience = () => {
-  
+  const [header, setHeader] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const headerRef = ref(db, "header");
+    onValue(headerRef, (snapshot) => {
+      const data = snapshot.val();
+      setHeader(data);
+    });
+  }, []);
   return (
     <div className="section" id="experience">
       <div className="container cc-experience">
