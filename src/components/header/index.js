@@ -1,6 +1,15 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
 const Header = () => {
+  const [header, setHeader] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const headerRef = ref(db, "header");
+    onValue(headerRef, (snapshot) => {
+      const data = snapshot.val();
+      setHeader(data);
+    });
+  }, []);
   return (
     <header>
       <div className="profile-page sidebar-collapse">
@@ -11,7 +20,7 @@ const Header = () => {
           <div className="container">
             <div className="navbar-translate">
               <a className="navbar-brand" href="#" rel="tooltip">
-                My Portofolio
+                {header.header1}
               </a>
               <button
                 className="navbar-toggler navbar-toggler"
@@ -34,22 +43,22 @@ const Header = () => {
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <a className="nav-link smooth-scroll" href="#about">
-                    About
+                    {header.header2}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link smooth-scroll" href="#skill">
-                    Skills
+                    {header.header3}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link smooth-scroll" href="#experience">
-                    Education
+                    {header.header4}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link smooth-scroll" href="#contact">
-                    Contact
+                    {header.header5}
                   </a>
                 </li>
               </ul>

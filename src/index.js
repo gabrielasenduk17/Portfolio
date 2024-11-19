@@ -4,6 +4,7 @@ import "./index.css";
 import "bootstrap";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./config/Firebase";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
